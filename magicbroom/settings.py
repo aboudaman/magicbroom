@@ -110,6 +110,14 @@ elif DJANGO_MODE == 'staging':
             'PORT': os.getenv('DB_PORT', '5432'),
         }
     }
+elif DJANGO_MODE == 'production':
+    import dj_database_url
+    # Handle database url environment variable for production
+    DATABASES = {
+        'default': dj_database_url.config()
+
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -150,6 +158,9 @@ TIME_INPUT_FORMATS = ['%I:%M %p',]
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Collect all static files
+STATIC_ROOT = 'staticfiles'
 
 # Define static files location
 STATICFILES_DIRS = (
