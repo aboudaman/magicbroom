@@ -1,0 +1,252 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Residential and Business Cleaning Services in Orlando, FL">
+    <meta name="author" content="Wintap Web Design Services">
+    <link rel="icon" href="{% static 'magicassets/images/broom.png'%}">
+
+    <title>Magic Broom Cleaning Services in Orlando, Florida</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="http://v4-alpha.getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet"> -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+        integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kurale|Lobster+Two:400i|Zilla+Slab" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'magicassets/css/social.css' %}">
+    <link rel="stylesheet" href="{% static 'magicassets/css/style.css' %}">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+  <style>
+
+  </style>
+  </head>
+  <body data-spy="scroll" data-target="#navbar-magic" id="home">
+    <!-- <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse" id="navbar-magic">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'magicbroom:home' %}"><img src="{% static 'magicassets/images/broom.png'%}" width="100px" height="45px" alt="Magic Broom Logo"></a>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active home-track">
+            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#heading1">Our Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#heading2">Why Choose Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#heading3">Request A Quotation</a>
+          </li>
+        </ul>
+      </div>
+    </nav> -->
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <!-- <div class="callTo"> -->
+      <!-- <div class="jumbotron"> -->
+        <!-- <div class="container"> -->
+          <!-- <h1>Magic Broom Cleaning Services</h1> -->
+          <!-- <p class="intro-text">Thank you for visiting our site.  We are an Orlando based cleaning service provider.<br /> -->
+            <!-- Our mission is to ensure that your home or business is spotless. <br /> -->
+            <!-- We provide different category of services to specifically meet your needs. -->
+          <!-- </p> -->
+          <!-- <p class="signature">Yours Sincerely, Magic Broom Team</p> -->
+          <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">« Request A Quotation »</a></p> -->
+        <!-- </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+
+<!-- <div class="overlay"> -->
+  <div class="jumbotron">
+      <h1 class="display-3">This is a jumbotron</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="m-y-md">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis fugiat placeat vero a in voluptates voluptate numquam recusandae nihil mollitia!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cupiditate quidem voluptates aut aliquam perspiciatis dolor dolorum facere pariatur suscipit.
+      </p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p>
+  </div>
+<!-- </div> -->
+
+
+
+    <div class="container">
+      <div class="row content-heading">
+        <div  id="heading1" class="col">
+            <h2>Our Services</h2>
+        </div>
+      </div>
+      <!-- Example row of columns -->
+      <div class="row ">
+        <div class="col">
+          <h4>Residential Cleaning</h2>
+          <p>Your home is our home. &nbsp;We will clean all surfaces and every rooms in your home.</p>
+          <img src="{% static 'magicassets/images/residential.jpg' %}" alt="Residential Cleaning" class="img-fluid">
+          <p><a class="btn btn-primary secondsection" href="#" role="button">Request a Quotation »</a></p>
+        </div>
+        <div class="col">
+          <h4>Recurring Cleaning Services</h2>
+          <p>Do you require maintenance Cleaning? we can provide weekly or every other week cleaning services. &nbsp;</p>
+          <img src="{% static 'magicassets/images/recurring.jpg' %}" alt="Recurring Cleaning Services" class="img-fluid">
+          <p><a class="btn btn-primary secondsection" href="#" role="button">Request a Quotation »</a></p>
+       </div>
+        <div class="col">
+          <h4>Occasional Cleaning Services</h2>
+          <p>Maybe you need cleaning services once in a while? Yes, we can provide that too.</p>
+          <img src="{% static 'magicassets/images/occasional.jpg' %}" alt="Recurring Cleaning Services" class="img-fluid">
+          <p><a class="btn btn-primary secondsection" href="#" role="button">Request a Quotation »</a></p>
+        </div>
+      </div>
+      <div class="row" id="heading2">
+        <div class="col-md-12">
+          <h2>Why Work With Us?</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col thirdsection">
+          <h4>We clean it your way </h4>
+          <p>Before we start cleaning your home, we discuss your requirements to ensure you have the cleaning methodology you want.</p>
+        </div>
+        <div class="col thirdsection">
+          <h4>Satisfaction Guaranteed</h4>
+          <p>We are based locally in Orlando and we are commited to ensure that our service brings you total satisfaction.</p>
+        </div>
+        <div class="col thirdsection">
+          <h4>Competitive Pricing</h4>
+          <p>We are commited to providing the best service at the most affordable price.</p>
+
+        </div>
+        <div class="col thirdsection">
+          <h4>No Contracts</h4>
+          <p>We do not require any commitments or contractual obligations, because once you use our service, we are confident that you will come back to us.</p>
+        </div>
+        <div class="col thirdsection">
+          <h4>Security</h4>
+          <p>Our staff are bonded and insured by Magic Broom cleaning service for your protection. &nbsp;</p>
+        </div>
+      </div>
+      <!-- <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Our Prices are Competitive</h1>
+          <p class="lead text-left">Contact Us for a quote</p>
+        </div>
+      </div> -->
+
+      <hr>
+
+      <footer>
+        <div class="footer-social-icons">
+            <h4>Follow us on</h4>
+            <ul class="social-icons">
+                <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+            </ul>
+        </div>
+
+        <p>© Wintap Media Services 2017</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+    <script>
+
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function(){
+        $("h1").hover(function(){
+            $("h1").toggleClass("animated shake");
+        });
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+
+      // $(window).scroll(function(){
+      //       if ($(this).scrollTop() < 30) {
+      //         $('nav').fadeIn(500);
+      //         $('#sticky-sidebar').fadeOut(500);
+      //       } else {
+      //         $('nav').fadeOut(500);
+      //           $('#sticky-sidebar').fadeIn(500);
+      //       }
+      //   });
+
+      // $('body').scrollspy({ target: '#navbar-magic' });
+
+      // $('li').click(function(e) {
+      // e.preventDefault();
+      // $('li').removeClass('active');
+      // $(this).addClass('active');
+      // alert("HOLA");
+      // });
+
+      // $(window).scroll(function(e) {
+      //   e.preventDefault();
+      //   if ($(this).scrollTop() > 50) {
+      //     $('.home-track').removeClass('active');
+      //   } else {
+      //     $('.home-track').addClass('active');
+      //   }
+      // });
+
+    });
+
+  </script>
+  </body>
+</html>

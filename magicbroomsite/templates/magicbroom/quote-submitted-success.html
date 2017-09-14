@@ -1,0 +1,350 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Residential and Business Cleaning Services in Orlando, FL">
+    <meta name="author" content="Wintap Web Design Services">
+    <link rel="icon" href="{% static 'magicassets/images/broom.png'%}">
+    <title>Magic Broom Cleaning Services in Orlando, Florida</title>
+    <!--  Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kurale|Lobster+Two:400i|Zilla+Slab" rel="stylesheet">
+    <!--  Stylesheets-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+        integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="{% static 'magicassets/js/g_map.js' %}" charset="utf-8"></script>
+    <link rel="stylesheet" href="{% static 'magicassets/pickadate/lib/themes/classic.time.css' %}">
+    <link rel="stylesheet" href="{% static 'magicassets/pickadate/lib/themes/classic.css' %}">
+    <link rel="stylesheet" href="{% static 'magicassets/pickadate/lib/themes/classic.date.css' %}">
+    <link rel="stylesheet" href="{% static 'magicassets/css/social.css' %}">
+    <link rel="stylesheet" href="{% static 'magicassets/css/style.css' %}">
+</head>
+  <body>
+    <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse nav-custom" id="navbar-magic" >
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'magicassets/images/broom.png'%}" width="100px" height="45px" alt="Magic Broom Logo"></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="text-nowrap nav-link home-track" href="/magicbroom/#home">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="text-nowrap nav-link" id="nav-custom" href="/magicbroom/#heading1">Our Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-nowrap nav-link" href="/magicbroom/#heading2">Why Work With Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-nowrap nav-link quote_request" href="#request_form">Request A Quotation</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--  Jumbotron -->
+    <div class="overlay">
+      <div class="jumbotron">
+      <!-- <h1 class="display-3">Magic Broom Cleaning Services</h1>
+      <p class="lead intro-text">Thank you for visiting our site.<br />
+          We are an Orlando based cleaning service provider.<br />
+          Our mission is to ensure that your home or business is spotless</p>
+      <hr class="my-4"> -->
+      <p class="lead intro-text"> We provide different category of services to specifically meet your needs</p>
+      <p class="signature">Yours Sincerely, Magic Broom Team</p>
+      <!-- <p class="lead">
+        <a class="btn btn-primary btn-lg quote_request but_quote" href="/magicbroom/#request_form" id="buttonQuote" role="button">« Request A Quotation »</a>
+      </p> -->
+    </div>
+    </div>
+
+  <!-- Kitchen  -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title heading-colors" id="exampleModalLabel">Your Kitchen Cleaning includes </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-success">Disinfecting every surface <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+              <li class="list-group-item list-group-item-info">Clean your microwave <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+              <li class="list-group-item list-group-item-success">Wash Countertops <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+              <li class="list-group-item list-group-item-info">Sweep the floors <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+              <li class="list-group-item list-group-item-success">Mop the floors <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+              <li  class="list-group-item list-group-item-info">Empty the trash cans <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary " data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  Your Bedroom(s) -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Your Bedroom Cleaning includes </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-success">Every surface is dusted <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+              <li class="list-group-item list-group-item-info">Mirrors will be cleaned <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+              <li class="list-group-item list-group-item-success">Floors will be vacuumed <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  Your Living Room -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Your Living Room Includes </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-success">Dusting of every surface <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+              <li class="list-group-item list-group-item-info">Vacuuming of floors <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+              <li class="list-group-item list-group-item-success">Sweeping of floors <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+              <li class="list-group-item list-group-item-info">Moping of floors <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--  Your Dining Room -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Your Dining Room Cleaning includes </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-success">Dusting of every surface <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+              <li class="list-group-item list-group-item-info">Wiping of table clean <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+              <li class="list-group-item list-group-item-success">Sweeping of floors <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+              <li class="list-group-item list-group-item-info">Moping of floors <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+              <li class="list-group-item list-group-item-success">Vacuuming of floors <i class="smiley-font fa fa-smile-o" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+    <!--  END MODALS -->
+  <div class="container">
+
+  <div class="row">
+      <div class="col-sm-12 col-md-8 thirdsection" id="request_form">
+
+        <p>
+
+          Congratulations!!!! you are one step away from getting the best
+          house cleaning service in Orlando.
+
+          A member of our team will be contacting you shortly with a quotation.<br /><br />
+
+          Thank you again for taking the time to complete the form.<br /><br />
+
+          <small class="signature">Magic Broom Team</small>
+        </p>
+
+</div>
+      <div class="col-sm-12 col-md-4 thirdsection">
+        <div class="row ">
+          <div class="col-sm-12 col-md-12 map-heading">
+            <h4 class="heading-colors">Services Included</h4>
+            <ul class="list-group">
+              <li class="list-group-item justify-content-between">
+                Your Kitchen <i class="fa fa-arrow-circle-right" aria-hidden="true"></i><!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary"
+                     data-toggle="modal" data-target="#myModal">
+                      Details
+                  </button>
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+              </li>
+              <li class="list-group-item justify-content-between">
+                Your Bedroom<i class="fa fa-arrow-circle-right" aria-hidden="true"></i><!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary"
+                     data-toggle="modal" data-target="#myModal1">
+                      Details
+                  </button>
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+              </li>
+              <li class="list-group-item justify-content-between">
+                Your Living Room <i class="fa fa-arrow-circle-right" aria-hidden="true"></i><!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary"
+                     data-toggle="modal" data-target="#myModal2">
+                      Details
+                  </button>
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+              </li>
+              <li class="list-group-item justify-content-between">
+                Your Dining Room <i class="fa fa-arrow-circle-right" aria-hidden="true"></i><!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary"
+                     data-toggle="modal" data-target="#myModal3">
+                      Details
+                  </button>
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <h4 class="map-heading heading-colors">Our Coverage Area</h4>
+        <div id="map" style="width:100%;height:500px"></div>
+      </div>
+    </div>
+
+  </div> <!--  End Container-->
+  <footer class="navbar">
+    <!-- <div class="navbar-nav"> -->
+      <p class="justify-content-center follow-us">Follow Us
+      </p>
+      <p class="justify-content-center">
+        <a class="btn" href="#">
+        <i class="fa fa-facebook fa-2x"></i>
+        </a>
+        <a class="btn" href="#">
+        <i class="fa fa-twitter fa-2x"></i>
+        </a>
+      </p>
+      <p class="justify-content-center wintap-info">
+        © Wintap Media Services 2017
+      </p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <!-- <script src="{% static 'magicassets/js/tawkto.js' %}" charset="utf-8"></script> -->
+  <!-- <script src="{% static 'magicassets/js/magic.js' %}" charset="utf-8"></script> -->
+  <script src="{% static 'magicassets/pickadate/lib/picker.js' %}"></script>
+  <script src="{% static 'magicassets/pickadate/lib/picker.date.js' %}"></script>
+  <script src="{% static 'magicassets/pickadate/lib/picker.time.js' %}"></script>
+  <script src="{% static 'magicassets/pickadate/lib/legacy.js' %}"></script>
+  <script src="{% static 'magicassets/js/date_time.js' %}"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR4OFIDIVXFoxZtOZ-iLD3RIbMCwiTn_Y&callback=myMap"></script>
+
+  <script>
+  $(document).ready(function() {
+    $(".quote_request").click(function() {
+      $('html, body').animate({
+        scrollTop: $("#request_form").offset().top
+      }, 2000);
+  });
+
+// Set Form Headings
+  // $('#id_booking_date').parent().before('<hr class="my-4"><h2 class = "headers heading-colors">Booking Date and Time</h2>');
+
+  // $('#id_last_name').parent().before('<h2 class = "headers heading-colors">Customer Information</h2>');
+  // $('#id_last_name').parent().before('<h2 class = "headers">Tell us about yourself</h2>');
+
+  // $('#id_address').parent().before('<hr class="my-4"><h2 class = "headers heading-colors">Customer Information</h2>');
+  // $('#id_choose_service').parent().before('<hr class="my-4"><h2 class = "headers heading-colors">Tell Us About Your Home</h2>');
+
+
+  // $('#timing').pickatime({
+  //   min: [6,30],
+  //   max: [19,0]
+  // });
+
+//   $("ul.errorlist").each(function(){
+//     $(this).append(".errorlist");
+// });
+
+var $newClass = $("ul.errorlist");
+// $(".errorlist2").append($newClass);
+
+// Add class to labels that are required
+$('label[for=booking_time]').addClass('required');
+// $('label[for=service_type]').addClass('form-check-label');
+
+// Add class to service_type
+$('#id_service_type').addClass('list-unstyled');
+
+// Add class to extra_service
+$('#id_extra_service').addClass('list-unstyled');
+
+// Add Class on page load
+$("#id_zip_code").addClass("mynewclass");
+
+$("#id_booking_date,#id_booking_time").css('background-color', 'white');
+
+// Disable State field
+$("#id_state").prop('disabled', true);
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus();
+})
+
+$('#myModal1').on('shown.bs.modal', function () {
+  $('#myInput').focus();
+})
+
+$('#myModal2').on('shown.bs.modal', function () {
+  $('#myInput').focus();
+})
+// $("#myModal").modal("show")
+
+});
+  </script>
+  </body>
+</html>

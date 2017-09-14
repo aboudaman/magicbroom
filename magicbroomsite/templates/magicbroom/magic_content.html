@@ -1,0 +1,63 @@
+{% load staticfiles %}
+  <div class="row content-heading">
+    <div class="col-md-12">
+        <h2 id = "heading1" class="heading-colors">Our Services</h2>
+    </div>
+  </div>
+  <!-- <div class="row no-gutters">
+    <div class="col" style="background-color: red;">
+      Testing full widht
+    </div>
+  </div> -->
+  <div class="row">
+    <div class="row ">
+      <div class="col-sm-12 col-md-3 col-lg-3  secondsection">
+        <h4>Residential Cleaning</h4>
+        <p>Your home is our home. &nbsp;We will clean all surfaces and every rooms in your home.</p>
+        <img src="{% static 'magicassets/images/residential.jpg' %}" alt="Residential Cleaning" class="img-fluid">
+        <p><a class="btn btn-primary secondsection" href="{% url 'request_quotation' %}" role="button">Request a Quotation »</a></p>
+      </div>
+      <div class="col-sm-12 col-md-3 col-lg-3 secondsection">
+        <h4>Recurring Cleaning Services</h4>
+        <p>Do you require maintenance Cleaning? we can provide weekly or every other week cleaning services. &nbsp;</p>
+        <img src="{% static 'magicassets/images/recurring.jpg' %}" alt="Recurring Cleaning Services" class="img-fluid">
+        <p><a class="btn btn-primary secondsection" href="{% url 'request_quotation' %}" role="button">Request a Quotation »</a></p>
+     </div>
+      <div class="col-sm-12 col-md-3 col-lg-3  secondsection">
+        <h4>Occasional Cleaning Services</h4>
+        <p>Maybe you need cleaning services once in a while? Yes, we can provide that too.</p>
+        <img src="{% static 'magicassets/images/occasional.jpg' %}" alt="Recurring Cleaning Services" class="img-fluid">
+        <p><a class="btn btn-primary secondsection" href="{% url 'request_quotation' %}" role="button">Request a Quotation »</a></p>
+      </div>
+    </div>
+  </div>
+  <hr class="my-4">
+  <div class="row content-heading">
+    <div class="col-md-12">
+      <h2 id="heading2" class="heading-colors">Why Work With Us?</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-4  thirdsection">
+      <h4>We clean it your way </h4>
+      <p>Before we start cleaning your home, we discuss your requirements to ensure you have the cleaning methodology you want.</p>
+    </div>
+    <div class="col-sm-12 col-md-4 thirdsection">
+      <h4>Satisfaction Guaranteed</h4>
+      <p>We are based locally in Orlando and we are commited to ensure that our service brings you total satisfaction.</p>
+    </div>
+    <div class="col-sm-12 col-md-4 thirdsection">
+      <h4>Competitive Pricing</h4>
+      <p>We are commited to providing the best service at the most affordable price.</p>
+
+    </div>
+    <div class="col-sm-12 col-md-6 thirdsection">
+      <h4>No Contracts</h4>
+      <p>We do not require any commitments or contractual obligations, because once you use our service, we are confident that you will come back to us.</p>
+    </div>
+    <div class="col-sm-12 col-md-6 thirdsection">
+      <h4>Security</h4>
+      <p>Our staff are bonded and insured by Magic Broom cleaning service for your protection. &nbsp;</p>
+    </div>
+
+  </div>

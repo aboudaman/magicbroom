@@ -1,0 +1,116 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Residential and Business Cleaning Services in Orlando, FL">
+    <meta name="author" content="Wintap Web Design Services">
+    <link rel="icon" href="{% static 'magicassets/images/broom.png'%}">
+    <title>Magic Broom Cleaning Services in Orlando, Florida</title>
+    <!--  Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kurale|Lobster+Two:400i|Zilla+Slab" rel="stylesheet">
+    <!--  Stylesheets-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+        integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <link rel="stylesheet" href="{% static 'magicassets/css/social.css' %}">
+    <link rel="stylesheet" href="{% static 'magicassets/css/style.css' %}">
+  </head>
+  <body data-spy="scroll" data-target="#navbar-magic" id="home">
+    <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse nav-custom" id="navbar-magic" >
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'magicassets/images/broom.png'%}" width="100px" height="45px" alt="Magic Broom Logo"></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="text-nowrap nav-link home-track active" href="#home">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="text-nowrap nav-link" id="nav-custom" href="#heading1">Our Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-nowrap nav-link" href="#heading2">Why Work With Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-nowrap nav-link quote_request" href="{% url 'request_quotation' %}">Request A Quotation</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--  Jumbotron -->
+    <div class="overlay">
+      <div class="jumbotron">
+      <h1 class="display-3 heading-colors ">Magic Broom Cleaning Services</h1>
+      <p class="lead intro-text">Thank you for visiting our site.<br />
+          We are an Orlando based cleaning service provider.<br />
+          Our mission is to clean your home with a smile <i class="smiley-font-home fa fa-smile-o" aria-hidden="true"></i></p>
+      <hr class="my-4">
+      <p class="lead intro-text"> We provide different category of services to specifically meet your needs</p>
+      <p class="signature">Yours Sincerely, Magic Broom Team</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg quote_request but_quote" href="{% url 'request_quotation' %}" id="buttonQuote" role="button">« Request A Quotation »</a>
+      </p>
+    </div>
+    </div>
+    <!-- <button onclick="#" id="myBtn" title="Go to top">Chat With Us</button> -->
+    <!-- <button onclick="" id="myBtn2" title="Go to top">Top2</button> -->
+  <div class="container">
+  <!-- {{request.user.username}} -->
+    {% block content %}
+      {% include "magicbroom/magic_content.html" %}
+    {% endblock content %}
+
+  </div> <!--  End Container-->
+  <footer class="navbar">
+    <!-- <div class="navbar-nav"> -->
+      <p class="justify-content-center follow-us">Follow Us
+      </p>
+      <p class="justify-content-center">
+        <a class="btn" href="#">
+        <i class="fa fa-facebook fa-2x"></i>
+        </a>
+        <a class="btn" href="#">
+        <i class="fa fa-twitter fa-2x"></i>
+        </a>
+      </p>
+      <p class="justify-content-center wintap-info">
+        <a href="{% url 'terms_of_service' %}">Terms of service</a> | <a href="{% url 'privacy_policy' %}">Privacy Policy</a> 
+      </p>
+      <p class="justify-content-center wintap-info">
+        © Wintap Media Services 2017
+      </p>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <!-- <script src="{% static 'magicassets/js/tawkto.js' %}" charset="utf-8"></script> -->
+  <script src="{% static 'magicassets/js/magic.js' %}" charset="utf-8"></script>
+
+  <script>
+  $(document).ready(function() {
+    $(".quote_request").click(function() {
+      $('html, body').animate({
+        scrollTop: $("#request_form").offset().top
+      }, 2000);
+  });
+
+  // $("#request_form").load(
+  //   "request_form");
+
+
+});
+  </script>
+  </body>
+</html>

@@ -1,0 +1,276 @@
+/*{% load staticfiles %}*/
+body {
+  font-family: 'Poppins', sans-serif;
+  /*background-color:rgba(162, 159, 170, 0.2);*/
+
+  /* Recommended background color for green*/
+  /*background-color:#4F4F4F;*/
+
+/* Recommended background for black text*/
+  /*background-color:#FFFFFF;*/
+
+  position:relative;
+  /*padding: 10px;*/
+}
+div.fixed {
+  position:fixed;
+  /*top: 0;*/
+}
+
+.clear_both {
+  /*clear: both;*/
+  margin-top: 200px;
+
+}
+/* Customize navbar font color*/
+/*.nav-custom .navbar-collapse .navbar-nav .nav-item .nav-link {
+  color: rgb(250, 254, 251);
+}*/
+ul#id_type_of_cleaning {
+  list-style-type: none;
+  width: 100%;
+  padding: 10px;
+}
+/*ul#id_type_of_cleaning li input {
+display: inline-block;
+color: green;
+}*/
+
+
+ul#id_type_of_cleaning li label input{
+/*display: inline-block;
+width: 6em
+position: relative;
+margin-left: 1px;
+margin-right: 1px;*/
+/*top: -1em;*/
+/*display: inline-block;*/
+/*width: 10em;
+position: relative;*/
+/*top: -3em;*/
+
+
+}
+
+ul#id_type_of_cleaning li label {
+/*display: inline-block;
+width: 6em;
+position: relative;*/
+/*margin-left: 500px;*/
+
+/*display: inline-block;
+width: 8em;
+margin-right: .5em;
+padding-top: 1.5em;
+word-wrap: break-word;*/
+
+color: green;
+}
+
+.errorlist2 {
+  margin-bottom: 30px;
+}
+.smiley-font {
+  position: fixed;
+  margin-left: 220px;
+  margin-top: -25px;
+  color: black;
+  font-size: 2em;
+}
+
+.smiley-font-home {
+  /*margin-left: 1em;*/
+  /*margin-top: -25px;*/
+  color: rgb(137, 193, 60);
+  font-size: 2em;
+  font-weight: bold;
+}
+.heading-colors {
+  /*color: rgb(237, 216, 25);*/
+  color: rgb(137, 193, 60);
+}
+.navbar-nav .nav-item .nav-link {
+  /*color: pink;*/
+  color: rgb(250, 254, 251);
+}
+
+a.nav-link:hover {
+  background-color: rgb(237, 216, 25);
+}
+
+.active {
+  background-color: rgb(137, 193, 60);
+}
+.quotation-heading {
+  margin-top: -41px;
+  text-align: center;
+}
+
+.map-heading {
+  margin-top: 25px;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+h4 {
+  font-weight:100;
+  font-size: 20px;
+  color: rgb(67, 69, 69);
+}
+
+.content-heading {
+  margin-top: 50px;
+}
+  ul.navbar-nav.ml-auto{
+    /*background-color: rgb(254, 185, 29);*/
+    margin-right: 20em;
+  }
+
+  nav{
+    padding: 10px;
+    background-color:  rgb(4, 34, 64);
+  }
+
+.overlay {
+margin-top: 40px;
+background-image: url('../images/jumbobroom.jpg');
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+
+.overlay .jumbotron {
+background: rgba(255, 255, 255, 0.75);
+text-align: center;
+color: rgb(67, 69, 69);
+}
+
+#sticky-sidebar {
+  position:fixed;
+  max-width: 20%;
+  margin-left: 1270px;
+}
+.secondsection {
+  margin-top: 40px;
+}
+
+.but-call-to {
+  margin-top: 60px;
+}
+.intro-text {
+  font-family:  'Kurale', serif;
+  font-weight: 900;
+  font-size: 28px;
+}
+
+.signature, .follow-us {
+  margin-top: 25px;
+  font-family: 'Lobster Two', cursive;
+  font-weight: 200;
+  font-size: 14px;
+}
+h1 {
+  font-family:  'Kurale', serif;
+}
+#heading1 {
+  margin-top: 20px;
+  /*font-weight: bolder;*/
+  margin-bottom: 55px;
+  margin-left: -12px;
+}
+
+.headers {
+  margin-top: 20px;
+    /*font-weight: bolder;*/
+  margin-bottom: 45px;
+}
+#heading2 {
+  margin-top: 40px;
+  margin-bottom: 55px;
+  /*font-weight: bolder;*/
+}
+#myBtn{
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    /*bottom: 643px; /* Place the button at the bottom of the page */*/
+    /*right: 748px; /* Place the button 30px from the right */*/
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#myBtn:hover{
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+.secondsection {
+  margin-top: 25px;
+}
+
+.thirdsection {
+  margin-top: 25px;
+}
+.lead {
+  text-align: center
+}
+footer.navbar {
+  /*margin-top: 150px;*/
+  background: rgb(137, 193, 60);
+  /*height: 167px;*/
+  text-align: center;
+  margin-top: 100px;
+}
+footer {
+  padding: 50px;
+  margin-bottom: 0px;
+  max-width: 100%;
+}
+.follow-us {
+  margin-top: 15px;
+}
+
+.wintap-info {
+  margin-bottom: 20px;
+  font-family: 'Lobster Two', cursive;
+  font-weight: 200;
+  font-size: 14px;
+
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding: 50px;
+  }
+  .navbar .navbar-nav {
+    display: inline-flex;;
+    /*float: right;*/
+    vertical-align: top;
+
+  }
+
+  .navbar .navbar-collapse {
+    margin-left: 10px;
+    text-align: left;
+  }
+  div.thirdsection {
+    /*background-color: purple;*/
+    /*margin: 5px;*/
+  }
+
+}
+@media (min-width: 992px) {
+  div.secondsection {
+    margin: 30px;
+    /*display: inline-block;*/
+    /*background-color: orange;*/
+
+  }
+}
