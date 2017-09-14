@@ -112,11 +112,10 @@ elif DJANGO_MODE == 'staging':
     }
 elif DJANGO_MODE == 'production':
     import dj_database_url
-    
+
     # Handle database url environment variable for production
     DATABASES = {
         'default': dj_database_url.config()
-
         }
     }
 
@@ -161,7 +160,8 @@ TIME_INPUT_FORMATS = ['%I:%M %p',]
 STATIC_URL = '/static/'
 
 # Collect all static files
-STATIC_ROOT = 'staticfiles'
+# STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
 
 # Define static files location
 STATICFILES_DIRS = (
