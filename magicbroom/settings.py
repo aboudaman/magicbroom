@@ -92,6 +92,7 @@ WSGI_APPLICATION = 'magicbroom.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+
 if DJANGO_MODE == 'local':
     DATABASES = {
         'default': {

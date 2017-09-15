@@ -57,7 +57,7 @@ class RequestQuotation(View):
             form.save()
             # form = RequestQuotationForm()
             # messages.success(request, 'Form submission successful')
-            subject, from_email, to = 'hello there', 'noreply@magicbroom.us', 'info@magicbroom.us'
+            subject, from_email, to = 'Quotation Request', 'noreply@magicbroom.us', 'info@magicbroom.us'
             text_content = 'Hello, You have received a quotation request.  Please login to view details'
             msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
             msg.attach_alternative('', 'test/html')
