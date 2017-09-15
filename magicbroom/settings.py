@@ -161,9 +161,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Define static files location
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'magicbroom', 'static'),
-# )
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'magicbroom', 'static'),
+)
 
 # Set Up Email Functionality
 EMAIL_HOST = 'smtp.sendgrid.net'
