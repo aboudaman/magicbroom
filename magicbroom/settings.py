@@ -15,9 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Set Internatl IP
-
-INTERNAL_IP = ['127.0.0.1', '192.168.0.6']
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -161,7 +158,7 @@ STATIC_URL = '/static/'
 
 # Collect all static files
 # STATIC_ROOT = 'staticfiles'
-STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Define static files location
 # STATICFILES_DIRS = (
