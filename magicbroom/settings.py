@@ -26,11 +26,11 @@ SECRET_KEY = '0+jas=_#1wfp%0#k=xpr_+wwvg+lg7o4vva189t5cy-md_bgt('
 # SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if DJANGO_MODE == 'local':
-    DEBUG = True
-else:
-    DEBUG = False
-
+# if DJANGO_MODE == 'local':
+#     DEBUG = True
+# else:
+#     DEBUG = False
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['*']
@@ -155,11 +155,12 @@ TIME_INPUT_FORMATS = ['%I:%M %p',]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
+# STATIC_URL = 'static/'
+STATIC_URL = os.path.join(BASE_DIR, 'static/')
 
 # Collect all static files
 # STATIC_ROOT = 'staticfiles'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
 
 # Define static files location
 STATICFILES_DIRS = (
@@ -168,6 +169,8 @@ STATICFILES_DIRS = (
 
 # Start config for compressor
 STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'compressor.finders.CompressorFinder',
 )
 COMPRESS_ENABLED = True

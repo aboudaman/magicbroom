@@ -1,5 +1,4 @@
 {% load staticfiles %}
-{% load compress %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,10 +21,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
-      {% compress css %}
-    <link rel="stylesheet" href="{% static 'magicassets/css/social.css' %}">
-    <link rel="stylesheet" href="{% static 'magicassets/css/style.css' %}">
-      {% endcompress %}
+      <link rel="stylesheet" href="{% static 'magicassets/css/social.css' %}">
+      <link rel="stylesheet" href="{% static 'magicassets/css/style.css' %}">
   </head>
   <body data-spy="scroll" data-target="#navbar-magic" id="home">
     <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse nav-custom" id="navbar-magic" >
