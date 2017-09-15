@@ -25,8 +25,8 @@ INTERNAL_IP = ['127.0.0.1', '192.168.0.6']
 DJANGO_MODE = os.getenv('DJANGO_MODE', "Production").lower()
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = '0+jas=_#1wfp%0#k=xpr_+wwvg+lg7o4vva189t5cy-md_bgt('
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = '0+jas=_#1wfp%0#k=xpr_+wwvg+lg7o4vva189t5cy-md_bgt('
+# SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if DJANGO_MODE == 'local':
@@ -111,13 +111,13 @@ elif DJANGO_MODE == 'staging':
             'PORT': os.getenv('DB_PORT', '5432'),
         }
     }
-elif DJANGO_MODE == 'production':
-    import dj_database_url
-
-    # Handle database url environment variable for production
-    DATABASES = {
-        'default': dj_database_url.config()
-        }
+# elif DJANGO_MODE == 'production':
+#     import dj_database_url
+#
+#     # Handle database url environment variable for production
+#     DATABASES = {
+#         'default': dj_database_url.config()
+#         }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -164,9 +164,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
 
 # Define static files location
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'magicbroom', 'static'),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'magicbroom', 'static'),
+# )
 
 # Set Up Email Functionality
 EMAIL_HOST = 'smtp.sendgrid.net'
