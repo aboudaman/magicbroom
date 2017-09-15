@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load compress %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -21,8 +22,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+      {% compress css %}
     <link rel="stylesheet" href="{% static 'magicassets/css/social.css' %}">
     <link rel="stylesheet" href="{% static 'magicassets/css/style.css' %}">
+      {% endcompress %}
   </head>
   <body data-spy="scroll" data-target="#navbar-magic" id="home">
     <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse nav-custom" id="navbar-magic" >
@@ -84,7 +87,7 @@
         </a>
       </p>
       <p class="justify-content-center wintap-info">
-        <a href="{% url 'terms_of_service' %}">Terms of service</a> | <a href="{% url 'privacy_policy' %}">Privacy Policy</a> 
+        <a href="{% url 'terms_of_service' %}">Terms of service</a> | <a href="{% url 'privacy_policy' %}">Privacy Policy</a>
       </p>
       <p class="justify-content-center wintap-info">
         © Wintap Media Services 2017

@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'localflavor',
     'phonenumber_field',
     'multiselectfield',
+    'compressor',
 
     # custom apps
     'magicbroomsite.apps.MagicbroomsiteConfig',
@@ -90,24 +91,24 @@ WSGI_APPLICATION = 'magicbroom.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-if DJANGO_MODE == 'local':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
+# if DJANGO_MODE == 'local':
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-elif DJANGO_MODE == 'staging':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': os.getenv('DB_NAME'),
-            'USER': os.getenv('USER'),
-            'PASSWORD': os.getenv('PASSWORD'),
-            'HOST': os.getenv('HOST', '127.0.0.1'),
-            'PORT': os.getenv('DB_PORT', '5432'),
-        }
-    }
+}
+# elif DJANGO_MODE == 'staging':
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#             'NAME': os.getenv('DB_NAME'),
+#             'USER': os.getenv('USER'),
+#             'PASSWORD': os.getenv('PASSWORD'),
+#             'HOST': os.getenv('HOST', '127.0.0.1'),
+#             'PORT': os.getenv('DB_PORT', '5432'),
+#         }
+#     }
 # elif DJANGO_MODE == 'production':
 #     import dj_database_url
 #
@@ -164,6 +165,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'magicbroom', 'static'),
 )
+
+# Start config for compressor
+STATICFILES_FINDERS = (
+    'compressor.finders.CompressorFinder',
+)
+COMPRESS_ENABLED = True
+COMPRESS_CSS_FILTERS = ["compressor.filters.cssmin.CSSMinFilter"]
+COMPRESS_URL = STATIC_URL
+# End compressor config
 
 # Set Up Email Functionality
 EMAIL_HOST = 'smtp.sendgrid.net'
