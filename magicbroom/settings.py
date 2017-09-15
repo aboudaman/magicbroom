@@ -170,6 +170,6 @@ STATICFILES_DIRS = (
 # Set Up Email Functionality
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = 'aboudaman'
-EMAIL_HOST_PASSWORD = '#########'
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
