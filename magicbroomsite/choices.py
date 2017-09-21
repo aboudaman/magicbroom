@@ -10,10 +10,10 @@ service_choices = (
 
 # Set Up choices for extra service
 extra_service_choices = (
-    ('1', 'Clean Oven'),
-    ('2', 'Clean Fridge'),
-    ('3', 'Clean Interior Window'),
-    ('4', 'Garage or Patio Sweep'),
+    ('1', 'Clean Oven ($30)'),
+    ('2', 'Clean Fridge ($30)'),
+    ('3', 'Clean Interior Window ($25)'),
+    ('4', 'Garage or Patio Sweep ($25)'),
 )
 
 # Set Up choices for referrer

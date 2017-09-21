@@ -18,7 +18,7 @@ class RequestQuotationForm(forms.ModelForm):
         label = "Enter Your Last Name",
         help_text = "Enter Your name here",
         widget = forms.TextInput(
-            attrs = {'class': 'form-control', 'placeholder': 'Enter Your Last Name',
+            attrs = {'class': 'form-control',
             }
         ),
         error_messages = {
@@ -30,7 +30,7 @@ class RequestQuotationForm(forms.ModelForm):
         label = "Enter Your First Name",
         help_text = "Enter Your First Name here",
         widget = forms.TextInput(
-            attrs = {'class': 'form-control', 'placeholder': 'Enter Your First Name',
+            attrs = {'class': 'form-control',
             }
         ),
         error_messages = {
@@ -42,7 +42,7 @@ class RequestQuotationForm(forms.ModelForm):
         label = "Enter Your Email Address",
         help_text = "Enter Your Email Address",
         widget = forms.EmailInput(
-            attrs = {'class': 'form-control', 'placeholder': 'Enter Your Email Address',
+            attrs = {'class': 'form-control',
             }
         ),
         error_messages = {
@@ -55,7 +55,7 @@ class RequestQuotationForm(forms.ModelForm):
         validators = [phone_regex],
         help_text = "Enter Your Telephone",
         widget = forms.TextInput(
-            attrs = {'class': 'form-control', 'placeholder': 'Enter Your Telephone Number',
+            attrs = {'class': 'form-control',
                 'type':'tel',
             }
         ),
@@ -68,7 +68,7 @@ class RequestQuotationForm(forms.ModelForm):
         label = "Street Address",
         help_text = "",
         widget = forms.TextInput(
-            attrs = {'class': 'form-control', 'placeholder': 'Enter Your Street Address',
+            attrs = {'class': 'form-control',
             }
         ),
         error_messages = {
@@ -120,6 +120,7 @@ class RequestQuotationForm(forms.ModelForm):
         required = True,
         widget = forms.Select(
             choices = referrer_choices,
+            attrs = {'class':'form-control required'}
         )
 
     )
@@ -208,6 +209,7 @@ class RequestQuotationForm(forms.ModelForm):
         error_messages = {
         }
     )
+
 
     class Meta:
         model = QuotationRequests

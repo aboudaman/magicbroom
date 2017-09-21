@@ -20,7 +20,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
-    <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="{% static 'magicassets/js/ie10.js' %}"> </script>
     <script src="{% static 'magicassets/js/g_map.js' %}" charset="utf-8"></script>
     <link rel="stylesheet" href="{% static 'magicassets/pickadate/lib/themes/classic.time.css' %}">
     <link rel="stylesheet" href="{% static 'magicassets/pickadate/lib/themes/classic.css' %}">
@@ -307,7 +307,7 @@
 
 <!--  Last Name -->
         <div class="form-group">
-          <label for="last_name">{{form.last_name.label}}</label>
+          <label for="last_name" class="required">{{form.last_name.label}}</label>
           {{form.last_name}}
         </div>
         {% if form.last_name.errors %}
@@ -322,7 +322,7 @@
 
 <!--  First Name -->
         <div class="form-group">
-          <label for="first_name">{{form.first_name.label}}</label>
+          <label for="first_name" class="required">{{form.first_name.label}}</label>
           {{form.first_name}}
         </div>
         {% if form.first_name.errors %}
@@ -337,7 +337,7 @@
 
 <!--  Email -->
 <div class="form-group">
-  <label for="email">{{form.email.label}}</label>
+  <label for="email" class="required">{{form.email.label}}</label>
   {{form.email}}
 </div>
 {% if form.email.errors %}
@@ -352,7 +352,7 @@
 
 <!-- Telephone -->
 <div class="form-group">
-  <label for="telephone">{{form.telephone.label}}</label>
+  <label for="telephone" class="required">{{form.telephone.label}}</label>
   {{form.telephone}}
 </div>
 {% if form.telephone.errors %}
@@ -367,7 +367,7 @@
 
 <!-- Address -->
 <div class="form-group">
-  <label for="address">{{form.address.label}}</label>
+  <label for="address" class="required">{{form.address.label}}</label>
   {{form.address}}
 </div>
 {% if form.address.errors %}
@@ -397,7 +397,7 @@
 
 <!-- City -->
 <div class="form-group">
-  <label for="city">{{form.city.label}}</label>
+  <label for="city" class="required">{{form.city.label}}</label>
   {{form.city}}
 </div>
 {% if form.city.errors %}
@@ -427,7 +427,7 @@
 
 <!--  Zip Code -->
 <div class="form-group">
-  <label for="zip_code">{{form.zip_code.label}}</label>
+  <label for="zip_code" class="required">{{form.zip_code.label}}</label>
   {{form.zip_code}}
 </div>
 {% if form.zip_code.errors %}
@@ -442,7 +442,7 @@
 
 <!--  House Information-->
 <div class="form-group">
-  <label for="last_name">{{form.home_info_boost.label}}</label>
+  <label for="last_name" class="required">{{form.home_info_boost.label}}</label>
   {{form.home_info_boost}}
 </div>
 {% if form.home_info_boost.errors %}
@@ -457,7 +457,7 @@
 
 <!-- Square Footage -->
 <div class="form-group">
-  <label for="square_feet">{{form.square_feet.label}}</label>
+  <label for="square_feet" class="required">{{form.square_feet.label}}</label>
   {{form.square_feet}}
 </div>
 {% if form.square_feet.errors %}
@@ -487,7 +487,7 @@
 
 <!--Rate Home  -->
 <div class="form-group">
-  <label for="rate_home">{{form.rate_home.label}}</label>
+  <label for="rate_home" class="required">{{form.rate_home.label}}</label>
   {{form.rate_home}}
 </div>
 {% if form.rate_home.errors %}
@@ -502,7 +502,7 @@
 
 <!-- Service Type -->
 <div class="form-check">
-  <label for="service_type">{{form.service_type.label}}</label>
+  <label for="service_type" class="required">{{form.service_type.label}}</label>
   {{form.service_type}}
 </div>
 {% if form.service_type.errors %}
@@ -517,7 +517,7 @@
 
 <!-- Extra Service -->
 <div class="form-check">
-  <label for="extra_service">{{form.extra_service.label}}</label>
+  <label for="extra_service">Extra Service (Optional)</label>
   {{form.extra_service}}
 </div>
 {% if form.extra_service.errors %}
@@ -532,7 +532,7 @@
 
 <!-- Booking Date -->
 <div class="form-group">
-  <label for="booking_date">{{form.booking_date.label}}</label>
+  <label for="booking_date" class="required">{{form.booking_date.label}}</label>
   {{form.booking_date}}
 </div>
 {% if form.booking_date.errors %}
@@ -562,7 +562,7 @@
 
 <!-- Referrer -->
 <div class="form-group">
-  <label for="referrer">{{form.referrer.label}}</label>
+  <label for="referrer" class="required">{{form.referrer.label}}</label>
   {{form.referrer}}
 </div>
 {% if form.referrer.errors %}
