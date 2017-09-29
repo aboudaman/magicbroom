@@ -46,6 +46,7 @@
           </li>
         </ul>
       </div>
+
     </nav>
     <!--  Jumbotron -->
     <div class="overlay">
@@ -60,6 +61,7 @@
       <p class="lead">
         <a class="btn btn-primary btn-lg quote_request but_quote" href="{% url 'request_quotation' %}" id="buttonQuote" role="button">« Request A Quotation »</a>
       </p>
+      <i class="fa fa-phone fa-2x" aria-hidden="true"> 407 286-8421</i>
     </div>
     </div>
     <!-- <button onclick="#" id="myBtn" title="Go to top">Chat With Us</button> -->
@@ -97,7 +99,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   {% compress js%}
-  <!-- <script src="{% static 'magicassets/js/tawkto.js' %}" charset="utf-8"></script> -->
+  <script src="{% static 'magicassets/js/tawkto.js' %}" charset="utf-8"></script>
   <script src="{% static 'magicassets/js/magic.js' %}" charset="utf-8"></script>
 
   <script>
@@ -108,11 +110,9 @@
       }, 2000);
   });
 
-  // $("#request_form").load(
-  //   "request_form");
-
 
 });
+
 
   </script>
 {% endcompress %}
