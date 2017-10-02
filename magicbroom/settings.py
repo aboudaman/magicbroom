@@ -30,7 +30,7 @@ SECRET_KEY = '0+jas=_#1wfp%0#k=xpr_+wwvg+lg7o4vva189t5cy-md_bgt('
 #     DEBUG = True
 # else:
 #     DEBUG = False
-DEBUG = True
+DEBUG = False
 
 
 ALLOWED_HOSTS = ['*']
