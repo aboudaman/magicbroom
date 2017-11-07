@@ -21,7 +21,7 @@ function myMap() {
 
   var myCity = new google.maps.Circle({
     center: orlando,
-    radius: 30000,
+    radius: 32000,
     strokeColor: "#0000FF",
     strokeOpacity: 0.8,
     strokeWeight: 2,
