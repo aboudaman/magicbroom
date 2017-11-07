@@ -179,7 +179,7 @@ COMPRESS_URL = STATIC_URL
 # End compressor config
 
 # # Set up secure redirect
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Set Up Email Functionality
