@@ -91,31 +91,31 @@ WSGI_APPLICATION = 'magicbroom.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-if DJANGO_MODE == 'local':
+# if DJANGO_MODE == 'local':
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-elif DJANGO_MODE == 'staging':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': os.getenv('DB_NAME'),
-            'USER': os.getenv('USER'),
-            'PASSWORD': os.getenv('PASSWORD'),
-            'HOST': os.getenv('HOST', '127.0.0.1'),
-            'PORT': os.getenv('DB_PORT', '5432'),
-        }
-    }
-elif DJANGO_MODE == 'production':
-    import dj_database_url
+# elif DJANGO_MODE == 'staging':
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#             'NAME': os.getenv('DB_NAME'),
+#             'USER': os.getenv('USER'),
+#             'PASSWORD': os.getenv('PASSWORD'),
+#             'HOST': os.getenv('HOST', '127.0.0.1'),
+#             'PORT': os.getenv('DB_PORT', '5432'),
+#         }
+#     }
+# elif DJANGO_MODE == 'production':
+#     import dj_database_url
 #
 #     # Handle database url environment variable for production
-    DATABASES = {
-        'default': dj_database_url.config()
-        }
+# DATABASES = {
+#     'default': dj_database_url.config()
+#     }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
