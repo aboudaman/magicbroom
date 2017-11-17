@@ -27,7 +27,7 @@ SECRET_KEY = '0+jas=_#1wfp%0#k=xpr_+wwvg+lg7o4vva189t5cy-md_bgt('
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # if DJANGO_MODE == 'local':
-DEBUG = False
+DEBUG = True
 # else:
 #     DEBUG = False
 # DEBUG = False
@@ -179,7 +179,7 @@ COMPRESS_URL = STATIC_URL
 # End compressor config
 
 # # Set up secure redirect
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Set Up Email Functionality

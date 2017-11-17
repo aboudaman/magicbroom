@@ -1,33 +1,159 @@
-{% extends "base3.html" %}
-  {% block content%}
-    <h4>Terms of Service</h4>
-    <p>The following is a list of terms that apply when using Magic Broom.  Please do not hesitate to contact us if you have questions about any of our terms!  We are here to help.</p>
-    <p><h5>Discount Codes:</h5><br />
-    The customer may only use one discount code per booking.  The customer may not use the same discount code twice for the same address (regardless if its a different date and time) however is allowed to pass the discount code off to friends or family for use.  All discount codes are only valid until they expire.  Discount codes cannot be used with other discounts (such as recurring billing discounts).</p>
-    <p><h5>Pricing:</h5><br />
-    Magic Broom reserves the right to add additional charges to the final price of cleanings considered innacurate in the description of the home submitted at the time of booking.  In other words&#8230; if you book for a 1 bedroom apartment, but you require service for a 2 or more bedroom home there will be additional charges.  We also reserve the right to deny booking or request for additional payments if your home is in worst condition than described.  Please ensure that your place is ucluttered, this will enable us to perform our job efficiently. </p>
-    <p><h5>Recurring Services:</h5><br />
-    You will receive discounted rates for recurring services. Cancellation can be made after one billable cleaning cycle.  The rates for Recurring services are valid for a period of 12 months.</p>
-    <p><h5>Right of Refusal:</h5><br />
-    Magic Broom retains the right to turn down any job for any reason.  Magic Broom will attempt to resolve any issues before refusal is considered.  The safety of our professional cleaners is always first.</p>
-    <p><h5>Complaints/Refund Requests:</h5><br />
-    Please note that all complaints and redo requests must be given to Magic Broom within 24 hours from the time of service.  You may report complaints and redo requests through our Customer Care by emailing info@magicbroom.us.  Please make sure you leave the time of service, customer name, customer address, phone and email address, and a detailed description of each complaint.</p>
-    <p><h5>Pets:</h5><br />
-    Please secure all pets in their travel crates or kennels.  Magic Broom will treat all pets with love and respect however cannot be responsible for them getting out.</p>
-    <p><h5>Time Constraints: </h5><br />
-    We will make every effort possible to meet any time constraint you may have.  This includes attempting to bring on a second or even third maid to complete the service.  However, the Magic Broom staff will not be responsible for unfinished cleanings when the customer puts the team on an unrealistic deadline.  Magic Broom will always clean until the service is completed but cannot be held responsible for cleanings not being finished due to the customer not booking enough time.  Please feel free to give us a call (407)286-8421 before booking to avoid any confusion.  If your time is limited we can work with you over the phone to pick out a time that works with all parties.</p>
-    <p><h5>Changing Time and Date of Service: </h5><br />
-    Please give Magic Broom a call at (407)286-8421 or email us at info@magicbroom.us if you wish to change the time or date of your service.  Please DO NOT attempt to change the time and date directly with the cleaning professional, it could result in a schedule clash due to the maid's prebooked schedule.
-    </p>
-    <h5><b>Additional Fees: </b></h5>
-    <p>1. Lock Out Fee: You will be charged a $40.00 fee if our team arrives to the cleaning location and cannot access the premises. You must either be home to let the cleaning professional inside or inform us ahead of time where you have hidden the key.</p>
-    <p>2. Late Cancellation Fee: You will be charged a $60.00 fee if you cancel a cleaning less than 24 hours before the appointment is scheduled to occur. </p>
-    <p>3. Return Credit Card or Check Fee: You will be charged a $30.00 fee for every failed check or credit card transaction.  This includes but is not limited to returned checks, declined payments, and NSF charges in general. </p>
-    <p>4. Collections Fee: If your account goes into our collections department it will be charged a $30.00 collections fee every thirty (30) days in collections.  Discount codes are not valid in collections debt and the customer will be expected to pay the full retail amount including any fees that have been added.  Payment is due before the service starts.  Invoices are due on the same day of the service.  Any payment not received  after service is rendered is considered late.  Any late payments that go past 30 days from the date of service will be placed into our collections department. </p>
-    <p><h5>Damaged Items:</h5><br />
-    If cause any damage to your property during cleaning, a report must be submitted within 48 hours after the date of service.  To submit a report, please send an email to info@magicbroom.us with the following information:</p>
-    <p> What exactly was damaged.<br />
-        What is the Fair Market Value of the damaged item.<br />
-        Photos showing the damage on said item.</p>
-    <p>Unfortunately, if a report is not filed within 48 hours of the date of service we will be unable to file a claim and thus cannot pay, or fix, or refund for damages caused.</p>
-  {% endblock content%}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Residential and Business Cleaning Services in Orlando, FL">
+    <meta name="author" content="Wintap Web Design Services">
+    <link rel="icon" href="{% static 'magicassets/images/broom.png'%}">
+    <title>Magic Broom Cleaning Services in Orlando, Florida</title>
+    <!--  Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kurale|Lobster+Two:400i|Zilla+Slab" rel="stylesheet">
+    <!--  Stylesheets-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+        integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="{% static 'magicassets/js/ie10.js' %}"> </script>
+    <script src="{% static 'magicassets/js/g_map.js' %}" charset="utf-8"></script>
+    <link rel="stylesheet" href="{% static 'magicassets/pickadate/lib/themes/classic.time.css' %}">
+    <link rel="stylesheet" href="{% static 'magicassets/pickadate/lib/themes/classic.css' %}">
+    <link rel="stylesheet" href="{% static 'magicassets/pickadate/lib/themes/classic.date.css' %}">
+    <link rel="stylesheet" href="{% static 'magicassets/css/social.css' %}">
+    <link rel="stylesheet" href="{% static 'magicassets/css/style.css' %}">
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108113680-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-108113680-1');
+  </script>
+</head>
+<body>
+  <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse nav-custom" id="navbar-magic" >
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'magicassets/images/broom.png'%}" width="100px" height="45px" alt="Magic Broom Logo"></a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="text-nowrap nav-link home-track" href="/#home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="text-nowrap nav-link" id="nav-custom" href="/#heading1">Our Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="text-nowrap nav-link" href="/#heading2">Why Work With Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="text-nowrap nav-link quote_request" href="#request_form">Request A Quotation</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--  Jumbotron -->
+  <div class="overlay">
+    <div class="jumbotron">
+    <!-- <h1 class="display-3">Magic Broom Cleaning Services</h1>
+    <p class="lead intro-text">Thank you for visiting our site.<br />
+        We are an Orlando based cleaning service provider.<br />
+        Our mission is to ensure that your home or business is spotless</p>
+    <hr class="my-4"> -->
+    <p class="lead intro-text"> We provide different category of services to specifically meet your needs</p>
+    <p class="signature">Yours Sincerely, The Team at Magic Broom</p>
+    <i class="fa fa-phone fa-2x" aria-hidden="true"> 407 286-8421</i><br /><br />
+    <img src="{% static 'magicassets/images/15%.png' %}" alt="Recurring Cleaning Services" width="800em" class="img-fluid">
+
+    <!-- <p class="lead">
+      <a class="btn btn-primary btn-lg quote_request but_quote" href="/magicbroom/#request_form" id="buttonQuote" role="button">« Request A Quotation »</a>
+    </p> -->
+  </div>
+  </div>
+  <!-- <button onclick="#" id="myBtn" title="Go to top">Chat With Us</button> -->
+  <!-- <button onclick="" id="myBtn2" title="Go to top">Top2</button> -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-8 thirdsection">
+        <h4>Terms of Service</h4>
+        <p>The following is a list of terms that apply when using Magic Broom.  Please do not hesitate to contact us if you have questions about any of our terms!  We are here to help.</p>
+        <p><h5>Discount Codes:</h5><br />
+        The customer may only use one discount code per booking.  The customer may not use the same discount code twice for the same address (regardless if its a different date and time) however is allowed to pass the discount code off to friends or family for use.  All discount codes are only valid until they expire.  Discount codes cannot be used with other discounts (such as recurring billing discounts).</p>
+        <p><h5>Pricing:</h5><br />
+        Magic Broom reserves the right to add additional charges to the final price of cleanings considered innacurate in the description of the home submitted at the time of booking.  In other words&#8230; if you book for a 1 bedroom apartment, but you require service for a 2 or more bedroom home there will be additional charges.  We also reserve the right to deny booking or request for additional payments if your home is in worst condition than described.  Please ensure that your place is ucluttered, this will enable us to perform our job efficiently. </p>
+        <p><h5>Recurring Services:</h5><br />
+        You will receive discounted rates for recurring services. Cancellation can be made after one billable cleaning cycle.  The rates for Recurring services are valid for a period of 12 months.</p>
+        <p><h5>Right of Refusal:</h5><br />
+        Magic Broom retains the right to turn down any job for any reason.  Magic Broom will attempt to resolve any issues before refusal is considered.  The safety of our professional cleaners is always first.</p>
+        <p><h5>Complaints/Refund Requests:</h5><br />
+        Please note that all complaints and redo requests must be given to Magic Broom within 24 hours from the time of service.  You may report complaints and redo requests through our Customer Care by emailing info@magicbroom.us.  Please make sure you leave the time of service, customer name, customer address, phone and email address, and a detailed description of each complaint.</p>
+        <p><h5>Pets:</h5><br />
+        Please secure all pets in their travel crates or kennels.  Magic Broom will treat all pets with love and respect however cannot be responsible for them getting out.</p>
+        <p><h5>Time Constraints: </h5><br />
+        We will make every effort possible to meet any time constraint you may have.  This includes attempting to bring on a second or even third maid to complete the service.  However, the Magic Broom staff will not be responsible for unfinished cleanings when the customer puts the team on an unrealistic deadline.  Magic Broom will always clean until the service is completed but cannot be held responsible for cleanings not being finished due to the customer not booking enough time.  Please feel free to give us a call (407)286-8421 before booking to avoid any confusion.  If your time is limited we can work with you over the phone to pick out a time that works with all parties.</p>
+        <p><h5>Changing Time and Date of Service: </h5><br />
+        Please give Magic Broom a call at (407)286-8421 or email us at info@magicbroom.us if you wish to change the time or date of your service.  Please DO NOT attempt to change the time and date directly with the cleaning professional, it could result in a schedule clash due to the maid's prebooked schedule.
+        </p>
+        <h5><b>Additional Fees: </b></h5>
+        <p>1. Lock Out Fee: You will be charged a $40.00 fee if our team arrives to the cleaning location and cannot access the premises. You must either be home to let the cleaning professional inside or inform us ahead of time where you have hidden the key.</p>
+        <p>2. Late Cancellation Fee: You will be charged a $60.00 fee if you cancel a cleaning less than 24 hours before the appointment is scheduled to occur. </p>
+        <p>3. Return Credit Card or Check Fee: You will be charged a $30.00 fee for every failed check or credit card transaction.  This includes but is not limited to returned checks, declined payments, and NSF charges in general. </p>
+        <p>4. Collections Fee: If your account goes into our collections department it will be charged a $30.00 collections fee every thirty (30) days in collections.  Discount codes are not valid in collections debt and the customer will be expected to pay the full retail amount including any fees that have been added.  Payment is due before the service starts.  Invoices are due on the same day of the service.  Any payment not received  after service is rendered is considered late.  Any late payments that go past 30 days from the date of service will be placed into our collections department. </p>
+        <p><h5>Damaged Items:</h5><br />
+        If cause any damage to your property during cleaning, a report must be submitted within 48 hours after the date of service.  To submit a report, please send an email to info@magicbroom.us with the following information:</p>
+        <p> What exactly was damaged.<br />
+            What is the Fair Market Value of the damaged item.<br />
+            Photos showing the damage on said item.</p>
+        <p>Unfortunately, if a report is not filed within 48 hours of the date of service we will be unable to file a claim and thus cannot pay, or fix, or refund for damages caused.</p>
+
+      </div>
+
+    </div>
+
+  </div>
+  <footer class="navbar">
+    <!-- <div class="navbar-nav"> -->
+      <p class="justify-content-center follow-us">Follow Us
+      </p>
+      <p class="justify-content-center">
+        <a class="btn" href="#">
+        <i class="fa fa-facebook fa-2x"></i>
+        </a>
+        <a class="btn" href="#">
+        <i class="fa fa-twitter fa-2x"></i>
+        </a>
+      </p>
+      <p class="justify-content-center wintap-info">
+        <a href="{% url 'terms_of_service' %}">Terms of service</a>
+        <!-- | <a href="{% url 'privacy_policy' %}">Privacy Policy</a> -->
+      </p>
+      <address class="justify-content-center wintap-info">
+        Magic Broom LLC<br />
+        750 South Orange Blossom Trail Suite 127 <br />
+        Orlando, FL 32805
+      </address>
+      <p class="justify-content-center wintap-info">
+        © Wintap Media Services 2017
+      </p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="{% static 'magicassets/js/tawkto.js' %}" charset="utf-8"></script>
+  <!-- <script src="{% static 'magicassets/js/magic.js' %}" charset="utf-8"></script> -->
+  <script src="{% static 'magicassets/pickadate/lib/picker.js' %}"></script>
+  <script src="{% static 'magicassets/pickadate/lib/picker.date.js' %}"></script>
+  <script src="{% static 'magicassets/pickadate/lib/picker.time.js' %}"></script>
+  <script src="{% static 'magicassets/pickadate/lib/legacy.js' %}"></script>
+  <script src="{% static 'magicassets/js/date_time.js' %}"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR4OFIDIVXFoxZtOZ-iLD3RIbMCwiTn_Y&callback=myMap"></script>
+</body>
+</html>
