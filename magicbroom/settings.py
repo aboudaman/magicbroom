@@ -22,8 +22,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DJANGO_MODE = os.getenv('DJANGO_MODE', "Production").lower()
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '0+jas=_#1wfp%0#k=xpr_+wwvg+lg7o4vva189t5cy-md_bgt('
-# SECRET_KEY = os.getenv('SECRET_KEY')
+# SECRET_KEY = '0+jas=_#1wfp%0#k=xpr_+wwvg+lg7o4vva189t5cy-md_bgt('
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if DJANGO_MODE == 'local':
