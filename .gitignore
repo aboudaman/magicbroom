@@ -4,3 +4,4 @@ db.sqlite3
 settings.py
 hero
 hero.pub
+#heroku run --exit-code --app magicbroom -- python manage.py migrate --noinput
