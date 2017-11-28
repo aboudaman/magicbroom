@@ -26,10 +26,10 @@ SECRET_KEY = '0+jas=_#1wfp%0#k=xpr_+wwvg+lg7o4vva189t5cy-md_bgt('
 # SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# if DJANGO_MODE == 'local':
-DEBUG = False
-# else:
-#     DEBUG = False
+if DJANGO_MODE == 'local':
+    DEBUG = True
+else:
+    DEBUG = False
 # DEBUG = False
 
 
@@ -91,31 +91,30 @@ WSGI_APPLICATION = 'magicbroom.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-# if DJANGO_MODE == 'local':
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if DJANGO_MODE == 'local':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
-# elif DJANGO_MODE == 'staging':
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#             'NAME': os.getenv('DB_NAME'),
-#             'USER': os.getenv('USER'),
-#             'PASSWORD': os.getenv('PASSWORD'),
-#             'HOST': os.getenv('HOST', '127.0.0.1'),
-#             'PORT': os.getenv('DB_PORT', '5432'),
-#         }
-#     }
-# elif DJANGO_MODE == 'production':
-#     import dj_database_url
-#
-#     # Handle database url environment variable for production
-# DATABASES = {
-#     'default': dj_database_url.config()
-#     }
+elif DJANGO_MODE == 'staging':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': os.getenv('DB_NAME'),
+            'USER': os.getenv('USER'),
+            'PASSWORD': os.getenv('PASSWORD'),
+            'HOST': os.getenv('HOST', '127.0.0.1'),
+            'PORT': os.getenv('DB_PORT', '5432'),
+        }
+    }
+elif DJANGO_MODE == 'production':
+    import dj_database_url
+    # Handle database url environment variable for production
+    DATABASES = {
+        'default': dj_database_url.config()
+        }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
