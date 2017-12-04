@@ -19,11 +19,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # Set Django mode
-DJANGO_MODE = os.getenv('DJANGO_MODE', "Production").lower()
+DJANGO_MODE = os.getenv('DJANGO_MODE', "production").lower()
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = '0+jas=_#1wfp%0#k=xpr_+wwvg+lg7o4vva189t5cy-md_bgt('
-SECRET_KEY = os.getenv('SECRET_KEY')
+if DJANGO_MODE == 'local':
+    SECRET_KEY = '0+jas=_#1wfp%0#k=xpr_+wwvg+lg7o4vva189t5cy-md_bgt('
+else:
+    SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if DJANGO_MODE == 'local':
@@ -178,8 +180,10 @@ COMPRESS_URL = STATIC_URL
 # End compressor config
 
 # # Set up secure redirect
-SECURE_SSL_REDIRECT = True
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+if DJANGO_MODE == 'production':
+    SECURE_SSL_REDIRECT = True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 
 # Set Up Email Functionality
 EMAIL_HOST = 'smtp.sendgrid.net'
