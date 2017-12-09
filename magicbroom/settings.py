@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # Set Django mode
-DJANGO_MODE = os.getenv('DJANGO_MODE', "local").lower()
+DJANGO_MODE = os.getenv('DJANGO_MODE', "production").lower()
 
 # SECURITY WARNING: keep the secret key used in production secret!
 if DJANGO_MODE == 'local':
