@@ -165,5 +165,16 @@
   <script src="{% static 'magicassets/pickadate/lib/legacy.js' %}"></script>
   <script src="{% static 'magicassets/js/date_time.js' %}"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR4OFIDIVXFoxZtOZ-iLD3RIbMCwiTn_Y&callback=myMap"></script>
+  <!--  Start Snow Scripts-->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/Snowstorm/20131208/snowstorm-min.js"></script>
+  <script>
+  //snowStorm.snowColor = '#6699cc'; //give the snowflakes another colour
+  snowStorm.flakesMaxActive = 96; //the maximum number of active snow flakes on the screen, lowering this may increase performance
+  snowStorm.followMouse = true; //the snow will fall in a certain direction based on the position of your mouse
+  //snowStorm.snowCharacter = '★'; //change the flake to a specific character
+  snowStorm.snowStick = true; //if true, the snow will stick to the bottom of the screen
+  </script>
+  <!--  End Snow Scripts-->
+
 </body>
 </html>

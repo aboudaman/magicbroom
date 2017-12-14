@@ -41,10 +41,13 @@
 
       gtag('config', 'UA-71299433-2');
     </script>
-
-
+    <style>
+      body {
+        background: rgba(173, 173, 173, 0.44);
+      }
+    </style>
   </head>
-  <body data-spy="scroll" data-target="#navbar-magic" id="home">
+  <body data-spy="scroll" data-target="#navbar-magic">
     <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse nav-custom" id="navbar-magic" >
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -130,6 +133,7 @@
   <script src="{% static 'magicassets/js/tawkto.js' %}" charset="utf-8"></script>
   <script src="{% static 'magicassets/js/magic.js' %}" charset="utf-8"></script>
 
+
   <script>
   $(document).ready(function() {
     $(".quote_request").click(function() {
@@ -142,5 +146,15 @@
 });
   </script>
 {% endcompress %}
+<!--  Start Snow Scripts-->
+<script src="//cdnjs.cloudflare.com/ajax/libs/Snowstorm/20131208/snowstorm-min.js"></script>
+<script>
+//snowStorm.snowColor = '#6699cc'; //give the snowflakes another colour
+snowStorm.flakesMaxActive = 96; //the maximum number of active snow flakes on the screen, lowering this may increase performance
+snowStorm.followMouse = true; //the snow will fall in a certain direction based on the position of your mouse
+//snowStorm.snowCharacter = '★'; //change the flake to a specific character
+snowStorm.snowStick = true; //if true, the snow will stick to the bottom of the screen
+</script>
+<!--  End Snow Scripts-->
   </body>
 </html>
