@@ -74,7 +74,7 @@ color: green;
 }
 .smiley-font {
   position: fixed;
-  margin-left: 220px;
+  margin-left: 250px;
   margin-top: -25px;
   color: black;
   font-size: 2em;
@@ -325,10 +325,23 @@ footer {
   font-size: 14px;
 
 }
+.services {
+  font-size: 0.8em;
+}
+.modal-body {
+  font-size: 0.8em;
+}
+/*### Media Queries ###*/
 
+/*screen size 575 and less*/
 @media (max-width: 575px) {
   .container {
     padding: 50px;
+  }
+
+  .modal-body {
+    width: 350px;
+    font-size: 12px;
   }
   .navbar .navbar-nav {
     display: inline-flex;;
@@ -341,12 +354,15 @@ footer {
     margin-left: 10px;
     text-align: left;
   }
-  div.thirdsection {
+  .services {
     /*background-color: purple;*/
+    font-size: 12px;
     /*margin: 5px;*/
   }
 
 }
+
+/*Screen size 992px and up*/
 @media (min-width: 992px) {
   div.secondsection {
     margin: 30px;
