@@ -99,7 +99,6 @@ class RequestQuotationForm(forms.ModelForm):
             'required': 'Your City location is required'
         }
     )
-
     state = forms.CharField(
         label = "State",
         required = False,
@@ -135,8 +134,6 @@ class RequestQuotationForm(forms.ModelForm):
             'invalid': 'Please enter a valid zip code'
         }
     )
-
-
     #
     rate_home = forms.IntegerField(
         label = "Condition of your home (1-10) 10 = cleanest",
@@ -210,9 +207,8 @@ class RequestQuotationForm(forms.ModelForm):
         }
     )
 
-
     class Meta:
         model = QuotationRequests
         fields =  ['last_name', 'first_name', 'email','telephone', 'address',
             'apt_suite', 'city', 'state', 'zip_code', 'home_info_boost', 'service_type', 'extra_service', 'square_feet', 'rate_home',
-             'check_if_carpet', 'booking_date', 'referrer']
+             'check_if_carpet', 'booking_date', 'booking_time', 'referrer']

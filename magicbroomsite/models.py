@@ -10,8 +10,8 @@ class QuotationRequests(models.Model):
         first_name = models.CharField(max_length=155)
         last_name = models.CharField(max_length=155)
         email = models.EmailField()
-        home_info = models.ManyToManyField("HouseInformation", related_name="home_infos")
-        home_info_boost = models.CharField(max_length=155, default=None)
+        #home_info = models.ManyToManyField("HouseInformation", related_name="home_infos")
+        home_info_boost = models.CharField(max_length=155, default=None, verbose_name="Number of Bedrooms and Bathrooms")
         service_type = MultiSelectField(choices=service_choices)
         extra_service = MultiSelectField(choices=extra_service_choices, default=None, null=True, blank=True)
         # extra_service = models.ManyToManyField("ExtraService", related_name="extra_service")
@@ -29,7 +29,6 @@ class QuotationRequests(models.Model):
         zip_code = models.CharField(max_length=5)
         booking_date = models.DateField(default=datetime.now)
         referrer = models.CharField(max_length=15, choices = referrer_choices)
-        # booking_time = models.TimeField()
 
         def __str__(self):
             return f"{self.last_name}, {self.first_name}"

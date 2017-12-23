@@ -67,5 +67,4 @@ class RequestQuotation(View):
             'form': form
         }
         # messages.success(request, 'Errors')
-
         return render(request, "magicbroom/request_quotation.html", context)

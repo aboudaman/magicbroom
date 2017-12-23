@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import QuotationRequests, HouseInformation, SquareFeet
+from .models import QuotationRequests
 # , ServiceType, \
                     # ExtraService, SquareFeet
 
@@ -28,7 +28,7 @@ class MagicAdmin(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(QuotationRequests, MagicAdmin)
-admin.site.register(HouseInformation)
+# admin.site.register(HouseInformation)
 # admin.site.register(ServiceType)
 # admin.site.register(ExtraService)
-admin.site.register(SquareFeet)
+# admin.site.register(SquareFeet)
