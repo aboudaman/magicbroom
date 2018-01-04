@@ -37,6 +37,9 @@ class QuotationRequests(models.Model):
         def list_quotations(self, *args, **kwargs):
             return ", ".join([quote.cleaning for quote in self.type_of_cleanings.all()])
 
+        # def get_absolute_url(self):
+        #     return '/'+self.email+'-'+self.address+'/'
+
 # Create class for type of cleaning
 class HouseInformation(models.Model):
     house = models.CharField(max_length=155)
