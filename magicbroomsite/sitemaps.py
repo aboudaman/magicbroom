@@ -13,7 +13,7 @@ from django.urls import reverse
 class StaticViewSitemap(sitemaps.Sitemap):
     priority = 0.5
     changefreq = 'daily'
-    protocol = 'https'
+    # protocol = 'https'
 
     def items(self):
         return ['home', 'terms_of_service', 'request_quotation', 'privacy_policy']
